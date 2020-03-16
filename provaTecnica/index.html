@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<title>Prova Técnica</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<script type="text/javascript" src="JS/script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Formulário HTML Elogroup</h2>
+
+		<form>
+			<label for="nome">Nome:</label><br>
+			<input class="w100" type="text" id="nome" name="nome" placeholder="Nome Completo" onblur="validarNome();" title="Nome e Sobrenome"><br>
+			<label for="telefone">Telefone:</label><br>
+			<input class="w100" type="text" id="telefone" name="telefone" value="" placeholder="(00) 0000 - 0000" onkeypress="return somenteNumeros(event)" title="Telefone com 10 dígitos"><br>
+			<label for="direcionamento">Como nos conheceu:</label><br>
+			<select class="w100" id="direcionamento" name="opcao">
+				<option value="null">Selecione</option>
+				<option value="tv">Tv</option>
+				<option value="internet">Internet</option>
+				<option value="outros">Outros</option>
+			</select><br>
+			<fieldset >
+				<legend>Possui rede Social?</legend>
+				<input type="radio" id="socialSim" name="redeSocial" value="1" onclick="mostraRedeSocial(1)">
+				<label for="socialSim">Sim</label>
+				<input type="radio" id="socialNao" name="redeSocial" value="0" onclick="mostraRedeSocial(0)">
+				<label for="socialNao">Não</label>
+			</fieldset>
+			
+			<br>
+			<fieldset id="redeSocial">
+				<legend>Quais?</legend>
+				<input type="checkbox" id="facebook" name="facebook" value="facebook">
+  				<label for="facebook"> Facebook</label><br>
+  				<input type="checkbox" id="linkedin" name="linkedin" value="linkedin">
+  				<label for="linkedin"> LinkedIn</label><br>
+  				<input type="checkbox" id="instagram" name="instagram" value="instagram">
+  				<label for="instagram"> Instagram</label><br>
+			</fieldset>
+			
+
+			<br>
+		</form> 
+		<button id="enviarForm" onclick="enviarForm();" class="w100" type="button">Enviar</button>
+		
+	</div>
+
+
+
+
+</body>
+</html>
