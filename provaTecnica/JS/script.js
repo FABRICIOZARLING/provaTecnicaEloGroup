@@ -28,12 +28,12 @@ function enviarForm(){
 	            xhr.open("POST", url, true);
 	            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');             
 	                          
-	            xhr.send(data);
-	            xhr.onreadystatechange = function () {
-	                if (xhr.readyState === 4 && xhr.status === 200) {
-	                   document.getElementById("enviarForm").disabled = true;
-	                }
+	            xhr.onload = function(){
+	            	if(xhr.status==200){
+	            		document.getElementById("enviarForm").disabled = true;
+	            	}
 	            };
+	        	xhr.send(data);
 
             }
 
